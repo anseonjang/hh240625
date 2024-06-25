@@ -244,7 +244,7 @@ a img {
 /* ========================= about ========================= */
 .circle-container {
      position: relative;
-   width: 100%;
+     width: 100%;
      height: 1080px;
      /* overflow: hidden; */
    }
