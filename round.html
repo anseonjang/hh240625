@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>동그라미 잔상 애니메이션 - CSS</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  .circle-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+  }
+
+  .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #0055ff;
+    transform: translate(-50%, -50%);
+    animation: moveCircle 2s linear infinite;
+  }
+
+  @keyframes moveCircle {
+    0% {
+      width: 10px;
+      height: 10px;
+      opacity: 0.8;
+    }
+    50% {
+      width: 50px;
+      height: 50px;
+      opacity: 0.3;
+    }
+    100% {
+      width: 100px;
+      height: 100px;
+      opacity: 0;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="circle-container">
+    <div class="circle"></div>
+  </div>
+</body>
+</html>
